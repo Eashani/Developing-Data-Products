@@ -1,0 +1,31 @@
+Documentation for RShiny App
+
+
+Creator: Eashani Deorukhkar
+
+
+The webapp created is a part of the week four assignment for the Developing Data Products course of the Coursera Data science specialization.
+
+About:
+
+This app uses linear regression to predict how likely various factors like age, sex, class, port of embarkation and number of siblings were responsible for the survival of passengers aboard the Titanic.
+
+Technical details:
+
+This app is made with RShiny. It has 2 main files, ui.R and server.R. 
+ui.R : This file faces the user and is responsible for  collecting input and displaying the output
+server.R : This file is responsible for the calculations based on the inputs and sending the outputs to ui.R
+
+Working:
+
+ ui.R has a group of radio buttons for input. The user chooses one button from them. Each option corresponds to a predictor from the list of predictors (age, sex, class, port of embarkation and number of siblings).
+This data is passed to server.R where linear regression is performed with survival as the response vector and the predictor as specified by the user.
+The results of the lm function are displayed as output.
+
+Decoding the lm output:
+
+The 2 parts of the output that need to be taken into consideration are, the coefficient estimates and the P values.
+The coefficient estimates specify the relation between the response and predictor. A positive value suggests that there is a positive relation while a negative value suggests that there is a negative relation.
+The P values denote the significance of the said result i.e. how likely is this result to be true/ significant
+
+
